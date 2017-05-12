@@ -1,23 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <loading v-model="isLoading"></loading>
     <router-view></router-view>
+    <app-tabbar></app-tabbar>
   </div>
 </template>
 
 <script>
+import appTabbar from './components/AppTabbar'
+import { mapState } from 'vuex'
+import { Loading } from 'vux'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    appTabbar,
+    Loading
+  },
+  computed: {
+    ...mapState({
+      isLoading: state => state.isLoading
+    })
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less">
+@import '~vux/src/styles/reset.less';
+
+body {
+  background-color: #fbf9fe;
 }
 </style>

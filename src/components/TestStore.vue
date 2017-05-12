@@ -1,10 +1,17 @@
 <template>
+  <div>
+  	
+  </div>
 </template>
 <script>
-export default{
-  
+export default {
+  name: 'tese-store',
+  data () {
+    return {
+    }
+  }
 }
 </script>
 <style scoped>
-  
+
 </style>

@@ -1,4 +1,4 @@
-# vue-kuaigugu
+# vux-kuaigugu
 
 > 快估估
 

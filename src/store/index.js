@@ -1,17 +1,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import A from './moduleA'
+import A from './module/moduleA' // test
 
 Vue.use(Vuex)
-const moduleB = {
-  state: {
-    name: 'i am a'
-  }
-}
 const store = new Vuex.Store({
+  state: {
+    name: 'i am state',
+    isLoading: false
+  },
+  getters: {
+    getname: state => state.name
+  },
+  mutations: {
+    updateLoadingStatus (state, payload) {
+      state.isLoading = payload.isLoading
+    }
+  },
   modules: {
-    a: A,
-    b: moduleB
+    a: A
   }
 })
 export default store

@@ -17,12 +17,22 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <appTabbar></appTabbar>
   </div>
 </template>
 
 <script>
+import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+import appTabbar from './Tabbar'
 export default {
   name: 'hello',
+  component: {
+    appTabbar,
+    Tabbar,
+    TabbarItem,
+    Group,
+    Cell
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
