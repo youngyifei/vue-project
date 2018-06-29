@@ -1,6 +1,6 @@
-# vux-kuaigugu
+# vux
 
-> 快估估
+> vue-project
 
 ## Build Setup
 
